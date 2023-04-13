@@ -60,6 +60,20 @@ public class FirstFragment extends Fragment {
             }
         });
 
+        button_adress.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                String peredachaAdressa = editText_adress.getText().toString();
+
+                Bundle bundle = new Bundle();
+                bundle.putString("adres", peredachaAdressa);
+
+                Navigation.findNavController(view).navigate(R.id.action_firstFragment_to_thirdFragment, bundle);
+
+            }
+        });
+
 
     }
 }
