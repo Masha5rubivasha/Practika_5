@@ -61,6 +61,8 @@ public class FirstFragment extends Fragment {
 
         button_notification = view.findViewById(R.id.button_notification);
 
+        button_banner = view.findViewById(R.id.button_banner);
+
         editText_number = view.findViewById(R.id.phoneNumber);
         editText_adress = view.findViewById(R.id.adress);
 
@@ -130,6 +132,14 @@ public class FirstFragment extends Fragment {
             }
         });
 
+
+        button_banner.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity().getApplicationContext(), MyService.class);
+                getActivity().startService(intent);
+            }
+        });
 
 
     }
